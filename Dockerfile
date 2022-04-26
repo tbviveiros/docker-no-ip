@@ -1,26 +1,24 @@
 FROM alpine:3.7
 
-MAINTAINER David Coppit <david@coppit.org>
-
 ENV TERM=xterm-256color
 
 RUN true && \
-\
-echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/community" >> /etc/apk/repositories && \
-apk --update upgrade && \
-\
-# Basics, including runit
-apk add bash curl htop runit && \
-\
-# Needed by our code
-apk add expect libc6-compat && \
-\
-rm -rf /var/cache/apk/* && \
-\
-# RunIt stuff
-adduser -h /home/user-service -s /bin/sh -D user-service -u 2000 && \
-chown user-service:user-service /home/user-service && \
-mkdir -p /etc/run_once /etc/service
+  \
+  echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/community" >> /etc/apk/repositories && \
+  apk --update upgrade && \
+  \
+  # Basics, including runit
+  apk add bash curl htop runit && \
+  \
+  # Needed by our code
+  apk add expect libc6-compat && \
+  \
+  rm -rf /var/cache/apk/* && \
+  \
+  # RunIt stuff
+  adduser -h /home/user-service -s /bin/sh -D user-service -u 2000 && \
+  chown user-service:user-service /home/user-service && \
+  mkdir -p /etc/run_once /etc/service
 
 # Boilerplate startup code
 COPY ./boot.sh /sbin/boot.sh

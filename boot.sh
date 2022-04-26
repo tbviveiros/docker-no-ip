@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Based on https://github.com/sanjeevan/baseimage
+# Based on https://github.com/sanjeevan/baseimage 
 
 shutdown() {
   echo

@@ -5,7 +5,7 @@ This is a simple Docker container for running the [No-IP2](http://www.noip.com/)
 your domain.ddns.net DNS alias up-to-date as your home IP changes.
 
 Usage
------
+----- 
 
 This docker image is available as a [trusted build on the docker index](https://index.docker.io/u/coppit/no-ip/).
 

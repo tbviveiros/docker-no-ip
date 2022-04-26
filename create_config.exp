@@ -1,6 +1,6 @@
 #!/usr/bin/expect
 
-# An expect script to automate the creation of the config file for noip2.
+# An expect script to automate the creation of the config file for noip2
 
 if {$argc != 4} {
   send_error "\nERROR: Pass arguments <email> <password> <domains or group> <interval>.\n"
