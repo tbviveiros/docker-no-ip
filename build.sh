@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-docker build --rm=true -t tbviveiros/no-ip . 
+docker build --rm=true -t tviveiros/no-ip . 
